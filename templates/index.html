@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Smart Proctor PRO</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body onclick="alertSound.muted = false;"> <div class="header">
+        <h1>🎓 AI Smart Proctor <span style="color: #ff4d4d;">PRO</span></h1>
+    </div>
+
+    <div class="dashboard">
+        <div class="video-container">
+            <img src="{{ url_for('video_feed') }}">
+            <div id="status-overlay">🔴 MONITORING 7x3 GRID</div>
+        </div>
+
+        <div class="log-container">
+            <h3>⚠️ Violation Logs</h3>
+            <div id="event-logs"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
